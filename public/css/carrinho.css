@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'California';
+    src: url(../fonts/California/The\ California.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background-color: #ede4e4;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #08A321;
+}
+
+
+
+/*Header*/
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 120px;
+    width: 100%;
+    padding: 20px 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    z-index: 99;
+    background-color:#ffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+}
+
+
+.logo{
+    font-size: 4.5em;
+    font-family: 'California', sans-serif;
+    color: #08A321;
+    font-weight: 200;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 10px;
+   
+}
+
+.navegacao .linkar{
+    position: relative;
+    font-size: 1.4em;
+    color: #08A321;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.navegacao .linkar::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #08A321;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navegacao .linkar:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navegacao .btn_login{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #08A321;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.4em;
+    color: #08A321;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.navegacao .btn_login:hover{
+    background: #08A321;
+    color:#fff;
+}
+
+main {
+    margin-top: 120px;
+    background-color: #ede4e4;
+    width: 100%;
+    height: 110vh;
+    position: relative;
+
+}
+
+/* section */
+
+.box-principal{
+    width: 86%;
+    height: 75%;
+    background-color: #fff;
+    z-index: 3;
+    position: absolute;
+    left: 25px;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, .5);
+}
+
+.div-produtos{
+    height: 150px;
+    width: 100%;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.div-produtos h2{
+    left: 210px;
+    top: 17px;
+    position: absolute;
+}
+
+.div-produtos h1{
+    color: #08A321;
+    position: absolute;
+    left: 210px;
+    top: 62px;
+    font-size: 1.9rem;
+}
+
+.div-produtos p{
+    bottom: 0;
+    position: absolute;
+    left: 210px;
+}
+
+#bt1{
+    color: #fff;
+    background-color: #08A321;
+    width: 110px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: absolute;
+    left: 850px;
+    top: 35px;
+    cursor: pointer;
+}
+
+#bt2{
+    color: #fff;
+    background-color: red;
+    width: 110px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: absolute;
+    left: 850px;
+    top:82px;
+    cursor: pointer;
+}
+
+
+#botao_menos{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 1020px;
+    top: 57px;
+    cursor: pointer;
+}
+
+#botao_mais{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 1100px;
+    top: 58px;
+    cursor: pointer;
+}
+
+.div-produtos input{
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 6px;
+    position: absolute;
+    left: 1055px;
+    top: 54px;
+    padding-left: 15px;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+#div-total{
+    height: 100px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px -5px 7px rgba(0, 0, 0, .2);
+    bottom: 0;
+    z-index: 4;
+    left: 0;
+    position: relative;
+}
+
+h2{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+#div-total strong{
+    color:#08A321;  
+}
+
+.limpar{
+    color: red;
+    position: absolute;
+    left: 780px;
+    font-size: 1.35rem;
+    top: 30px;
+    cursor: pointer;
+}
+
+.comprar{
+    color: #08A321;
+    position: absolute;
+    left: 1050px;
+    font-size: 1.35rem;
+    top: 30px;
+    cursor: pointer;
+}
+
+#icone1{
+    position: absolute;
+    left: 1015px;
+    top: 30px;
+    cursor: pointer;
+}
+
+#icone2{
+    position: absolute;
+    left: 750px;
+    top: 33px;
+    cursor: pointer;
+}
+
+.pratos{
+    height: 85%;
+    width: 170px;
+    z-index: 4;
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    border-radius: 10px;
+}
+
+#morango{
+    z-index: 4;
+    position: absolute;
+    height: 760px;
+    width: 230px;
+    right: 0;
+    top: 0;
+    
+}
+
+/*RODAPÉ*/
+
+footer{
+    background-color: rgb(28, 27, 27);
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+footer .direitos{
+    color: #fff;
+    position: absolute;
+    left: 3px;
+    bottom: 3px;
+    font-size: 0.8em;
+}
+
+.bloco-footer{
+    width: 20%;
+    height: 70%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.bloco-footer h3{
+    margin-bottom: 10px;
+    color: #a49c9c;
+}
+
+.bloco-footer a{
+    color: #fff;
+    margin-bottom: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.bloco-footer a:hover{
+    color: #08A321;
+}
+
+.bloco-footer h2{
+    font-family: 'California', sans-serif;
+    font-weight: 200;
+    color: #fff;
+    font-size: 5em;
+}
+
+.bloco-redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40px;
+    height: 300px;
+}
+
+.rede{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3f3d3d; 
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.rede:hover{
+    background-color: #08A321;
+}
+
+.rede img{
+    width: 25px;
+    height: 25px;
+}

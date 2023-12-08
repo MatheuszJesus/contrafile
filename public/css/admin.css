@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'California';
+    src: url(../fonts/California/The\ California.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #08A321;
+}
+
+
+/*Header*/
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    transition: 0.5s ease-in-out;
+    z-index: 99;
+}
+
+header.rolagem{
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, .5);
+}
+
+header.rolagem h2{
+    color: #08A321;
+}
+
+header.rolagem a{
+    color: #08A321;
+}
+
+header.rolagem .navegacao a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #08A321;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+header.rolagem .navegacao a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+header.rolagem .btn_login{
+    color: #08A321;
+    border: 2px solid #08A321;
+    transition: 0.3s ease-in-out;
+}
+
+header.rolagem .btn_login:hover{
+    color: #fff;
+    background: #08A321;
+}
+
+.logo{
+    font-size: 4.5em;
+    font-family: 'California', sans-serif;
+    color: #fff;
+    font-weight: 200;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.navegacao a{
+    position: relative;
+    font-size: 1.4em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.navegacao a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navegacao a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navegacao .btn_login{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.4em;
+    color: #080808;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.navegacao .btn_login:hover{
+    background: #08A321;
+    color: black;
+}
+
+/*Seção do texto e da imagem da pessoa*/
+
+.section-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../img/pratovegano2.jpeg) no-repeat; 
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 3;
+}
+
+.box-grande{
+    width: 70%;
+    height: 550px;
+    background-color: rgb(247,242,212);
+    z-index: 4;
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .8);
+    border-radius: 15px;
+}
+
+.box-grande .img-login{
+    z-index: 4;
+    width: 50%;
+    height: 100%;
+    background: url(../img/pratovegano2.jpeg) no-repeat; 
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px 0 0 15px;
+}
+
+.box-grande form{
+    height: 90%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgb(247,242,212);
+    position: relative;
+    border-radius: 0 15px 15px 0;
+    margin-top: 40px;
+}
+
+form h1{
+    font-size: 2.8rem;
+}
+
+form .bloco-input{
+    height: 45px;
+    width: 280px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    padding: 0px 10px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.bloco-input input{
+    height: 45px;
+    width: 250px;
+    border: none;
+    background-color: #fff;
+    padding: 0px 10px;
+    margin-left: 20px;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+textarea:focus, input:focus{
+    box-shadow: 0 0 0 ;
+    outline: 0;
+}
+
+form img{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+}
+
+form button{
+    background-color: #08A321;
+    color: #fff;
+    width: 180px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    letter-spacing: 3px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+form button:hover{
+    letter-spacing: 5px;
+    width: 190px;
+}
+
+.textos{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 100px;
+    padding: 0 0 0 115px;
+}
+
+.textos input{
+    margin-bottom: 25px;
+}
+
+.textos p{
+    font-weight: 500;
+}
+
+.textos .termos{
+    margin-left: 5px;
+    max-width: 280px;
+}
+
+.textos .link-login{
+    margin-left: 15px;
+}
+
+/*Rodapé*/
+
+footer{
+    background-color: rgb(28, 27, 27);
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+footer .direitos{
+    color: #fff;
+    position: absolute;
+    left: 3px;
+    bottom: 3px;
+    font-size: 0.8em;
+}
+
+.bloco-footer{
+    width: 20%;
+    height: 70%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.bloco-footer h3{
+    margin-bottom: 10px;
+    color: #a49c9c;
+}
+
+.bloco-footer a{
+    color: #fff;
+    margin-bottom: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.bloco-footer a:hover{
+    color: #08A321;
+}
+
+.bloco-footer h2{
+    font-family: 'California', sans-serif;
+    font-weight: 200;
+    color: #fff;
+    font-size: 5em;
+}
+
+.bloco-redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40px;
+    height: 300px;
+}
+
+.rede{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3f3d3d; 
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+}
+
+.rede:hover{
+    background-color: #08A321;
+}
+
+.rede img{
+    width: 25px;
+    height: 25px;
+}
+
